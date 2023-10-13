@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제목없음 - 그림판</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="sub-header">
+      <span class="painter-logo"><img src="./img/그림판.png" /></span>
+      <span class="save-button"><img src="./img/저장.png" /></span>
+      <span class="undo-button"><img src="./img/뒤로.png" class="undo-button" /></span>
+      <span class="redo-button"><img src="./img/앞으로.png" /></span>
+    </div>
+    <div class="main-header">
+      <div class="clipboard-part">
+        <span class="paste-button">📋</span>
+        <span>
+          <span class="cut-button">✂️</span>
+          <span class="copy-button">📑</span>
+        </span>
+        <select>
+          <option value="붙여넣기"><p>📋</p>붙여넣기</option>
+          <option value="파일로부터 붙여넣기"><p>📥</p>파일로부터 붙여넣기</option>
+        </select>
+      </div>
+      <div class="image-part">
+        <div>
+          <img src="./img/사각으로 선택.png" style="height:15px; width:15px"/>
+          <select>
+            <option value="">선택</option>
+            <option value=""><img src="./img/사각으로 선택.png">사각으로 선택</option>
+            <option value=""><img src="./img/자유롭게선택.png">자유롭게 선택</option>
+            <option value=""><img src="./img/모두선택.png">전체 선택</option>
+          </select>
+        </div>
+        <div>
+          <span>자르기</span>
+          <span>크기 조정</span>
+          <span>
+            <select>
+              <option>회전</option>
+              <option>시계방향으로 90도 회전</option>
+              <option>180도 회전</option>
+              <option>반시계방향으로 90도 회전</option>
+            </select>
+          </span>
+        </div>
+      </div>
+      <div class="tool-part">
+        <div class="tool-up">
+          <span class="tool-pen">✏️</span>
+          <span class="tool-paint">🪣</span>
+          <span class="tool-text">𝐀</span>
+        </div>
+        <div class="tool-down">
+          <span class="tool-eraser">🧱</span>
+          <span class="tool-spoid">🌡️</span>
+          <span class="tool-glasses">🔍</span>
+        </div>
+      </div>
+      <div class="brush-part">
+        <span>🖌️</span>
+        <select>
+          <option value="브러시">브러시</option>
+          <option value="브러시">브러시</option>
+          <option value="브러시">브러시</option>
+          <option value="브러시">브러시</option>
+        </select>
+      </div>
+      <div class="figure-part">
+        도형그리기
+      </div>
+      <div class="size-part">크기(이미지 추후 추가필요)
+        <select name="brush-thick" id="brush-thick">
+          <option value="1" class="thickpick 1px">1px</option>
+          <option value="2" class="thickpick 2px">2px</option>
+          <option value="5" class="thickpick 5px">5px</option>
+          <option value="10" class="thickpick 10px">10px</option>
+        </select>
+      </div>
+      <div class="color-part">
+        <button><span class="now-color" style="background-color: black;"></span>색1</button>
+        <button><span class="before-color" style="background-color: white;"></span>색2</button>
+        <div class="pick-colors">
+            <div class="pick-color" style="background-color: pink;"></div>
+            <div class="pick-color" style="background-color: red;"></div>
+            <div class="pick-color" style="background-color: orange;"></div>
+            <div class="pick-color" style="background-color: yellow;"></div>
+            <div class="pick-color" style="background-color: greenyellow;"></div>
+            <div class="pick-color" style="background-color: green;"></div>
+            <div class="pick-color" style="background-color: lightblue;"></div>
+            <div class="pick-color" style="background-color: blue;"></div>
+            <div class="pick-color" style="background-color: violet;"></div>
+            <div class="pick-color" style="background-color: purple;"></div>
+            <div class="pick-color" style="background-color: black;"></div>
+            <div class="pick-color" style="background-color: white;"></div>
+          </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <canvas style="background-color: white" class="canvas" width="500" height="500" />
+  </main>
+  <footer>
+    <div class="canvas-size">
+      <span>⇲</span>
+      <span>500 x 500px</span>
+    </div>
+    <div class="control-screen">
+      100%
+      <button>-</button>
+      <input type="range" class="screen-size" min="0" max="200" value="100" step="10" />
+      <button>+</button>
+    </div>
+  </footer>
+</body>
+<script src="./painter.js"></script>
+</html>

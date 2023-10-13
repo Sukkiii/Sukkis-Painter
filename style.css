@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header{
+  background-color: #e9F3FB;
+}
+header span img {
+  width: 6px;
+  height: 6px;
+}
+header span .undo-button {
+  transform: scaleY(-1);
+}
+main {
+  background-color: #BFCADB;
+  padding: 5px;
+  height: 100%;
+}
+footer {
+  background-color: #efeaea;
+}
